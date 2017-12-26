@@ -1,10 +1,10 @@
 # Cache the YR REST api using Varnish and nginx
 
-The YR api is located at [http://www.yr.no/api/v0/]. This repo contains a docker-compose and config files to serve the api using a nginx proxy container for fetching data from Yr and a Varnish cache container to cache the requests. Sample Traefix labels are added to make the api available on the internet.
+The YR api is located at https://www.yr.no/api/v0/. This repo contains a docker-compose and config files to serve the api using a nginx proxy container for fetching data from Yr and a Varnish cache container to cache the requests. Sample Traefik labels are added to make the api available on the internet.
 
 The setup will cache (TTL) for 30 minutes and serve stale content for another 5 minutes (grace period - while doing an async fetch of data from the API).
 
-Test url [http://www.yr.no/api/v0/locations/2-2300660/forecast]
+Test url https://www.yr.no/api/v0/locations/2-2300660/forecast
 
 # Usage
 
@@ -17,12 +17,12 @@ Open an issue!
 
 # Credits
 
-The Yr weather API is provided by Norwegian Meteorological Institute and NRK. Make sure you understand the [http://om.yr.no/verdata/vilkar/](usage requirements) before using the API.
+The Yr weather API is provided by Norwegian Meteorological Institute and NRK. Make sure you understand the [usage requirements](http://om.yr.no/verdata/vilkar/) before using the API.
 
 Docker images:
 
-* Varnish: [https://github.com/newsdev/docker-varnish](newsdev/varnish)
-* Nginx: [https://github.com/nginxinc/docker-nginx](nginx official)
+* Varnish: [newsdev/varnish](https://github.com/newsdev/docker-varnish)
+* Nginx: [nginx official](https://github.com/nginxinc/docker-nginx)
 
 # Inspiration
 
