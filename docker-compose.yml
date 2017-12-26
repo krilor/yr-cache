@@ -1,0 +1,10 @@
+version: '2'
+services:
+  yr-varnish:
+    build:
+      context: ./varnish
+    depends_on:
+      - yr-nginx
+  yr-nginx:
+    build:
+      context: ./nginx

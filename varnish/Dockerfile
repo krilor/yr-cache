@@ -1,0 +1,1 @@
+FROM newsdev/varnish

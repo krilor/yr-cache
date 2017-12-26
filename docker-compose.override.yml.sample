@@ -1,0 +1,24 @@
+# Sample override - adds Traefik labels and specifies networks
+version: '2'
+services:
+  yr-varnish: 
+    labels:
+      - "traefik.frontend.rule=Host:yr.docker.localhost"
+      - "traefik.enable=true"
+      - "traefik.docker.network=dev-gateway"
+    networks:
+      - gateway
+      - backend
+  yr-nginx:
+    labels:
+      - "traefik.enable=false"
+    networks:
+      - backend
+
+networks:
+  gateway:
+    external:
+      name: dev-gateway
+  backend:
+    external:
+      name: dev-backend
