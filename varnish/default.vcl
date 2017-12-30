@@ -37,4 +37,6 @@ sub vcl_deliver {
             set resp.http.X-Cache = "MISS";
     }
 
+    set resp.http.Access-Control-Allow-Origin = "http://weather.docker.localhost";
+
 }
